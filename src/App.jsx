@@ -1,28 +1,18 @@
-// src/App.jsx
-
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect } from 'react';
+import { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
-import About from './pages/About';
 import Community from './pages/Community';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
+import About from './pages/About';
 import Contact from './pages/Contact';
-
-// Constants
-const PAGES = {
-  HOME: 'home',
-  ABOUT: 'about',
-  COMMUNITY: 'community',
-  BLOG: 'blog',
-  BLOG_DETAIL: 'blog-detail',
-  CONTACT: 'contact',
-};
+import { ROUTES } from './constants';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(PAGES.HOME);
+  const [currentPage, setCurrentPage] = useState(ROUTES.HOME);
   const [selectedBlogId, setSelectedBlogId] = useState(null);
 
   // Scroll to top when page changes
@@ -33,39 +23,37 @@ function App() {
     });
   }, [currentPage]);
 
-  // Handle blog read more with useCallback for optimization
-  const handleBlogReadMore = useCallback((blogId) => {
-    setSelectedBlogId(blogId);
-    setCurrentPage(PAGES.BLOG_DETAIL);
-  }, []);
-
-  // Handle back to blog with useCallback for optimization
-  const handleBackToBlog = useCallback(() => {
-    setCurrentPage(PAGES.BLOG);
-  }, []);
-
-  // Page router with clear mapping
   const renderPage = () => {
-    const pageComponents = {
-      [PAGES.HOME]: <Home setCurrentPage={setCurrentPage} />,
-      [PAGES.ABOUT]: <About />,
-      [PAGES.COMMUNITY]: <Community />,
-      [PAGES.BLOG]: <Blog onReadMore={handleBlogReadMore} />,
-      [PAGES.BLOG_DETAIL]: <BlogDetail blogId={selectedBlogId} onBack={handleBackToBlog} />,
-      [PAGES.CONTACT]: <Contact />,
-    };
-
-    return pageComponents[currentPage] || pageComponents[PAGES.HOME];
+    switch(currentPage) {
+      case ROUTES.HOME:
+        return <Home setCurrentPage={setCurrentPage} />;
+      case ROUTES.COMMUNITY:
+        return <Community />;
+      case ROUTES.BLOG:
+        return <Blog onReadMore={(blogId) => {
+          setSelectedBlogId(blogId);
+          setCurrentPage(ROUTES.BLOG_DETAIL);
+        }} />;
+      case ROUTES.BLOG_DETAIL:
+        return <BlogDetail 
+          blogId={selectedBlogId} 
+          onBack={() => setCurrentPage(ROUTES.BLOG)}
+        />;
+      case ROUTES.ABOUT:
+        return <About />;
+      case ROUTES.CONTACT:
+        return <Contact />;
+      default:
+        return <Home setCurrentPage={setCurrentPage} />;
+    }
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      
-      <main className="flex-grow" role="main">
+      <main className="flex-grow">
         {renderPage()}
       </main>
-      
       <Footer setCurrentPage={setCurrentPage} />
       <ScrollToTop />
     </div>

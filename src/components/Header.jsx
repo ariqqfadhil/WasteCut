@@ -1,24 +1,20 @@
-// src/components/Header.jsx
-
 import React, { useState, useCallback } from 'react';
 import DarkModeToggle from './DarkModeToggle';
-import { NAV_ITEMS } from '../constants';
+import { NAV_ITEMS, ROUTES } from '../constants';
+import wastecutLogo from '../assets/images/wastecutlogo.png';
 
 function Header({ currentPage, setCurrentPage }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Handle navigation click with useCallback for optimization
   const handleNavClick = useCallback((pageId) => {
     setCurrentPage(pageId);
     setIsMobileMenuOpen(false);
   }, [setCurrentPage]);
 
-  // Toggle mobile menu
   const toggleMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(prev => !prev);
   }, []);
 
-  // Close mobile menu
   const closeMobileMenu = useCallback(() => {
     setIsMobileMenuOpen(false);
   }, []);
@@ -28,22 +24,18 @@ function Header({ currentPage, setCurrentPage }) {
       <header className="bg-green-600 dark:bg-green-800 text-white shadow-lg sticky top-0 z-50 animate-slideDown transition-colors duration-300">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo & Brand */}
-            <div className="flex items-center space-x-2 animate-slideInLeft">
-              <button
-                onClick={() => handleNavClick('home')}
-                className="bg-white text-green-600 dark:bg-gray-800 dark:text-green-400 rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl transition-all duration-300 hover:scale-110 hover:rotate-12 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-green-600"
-                aria-label="WasteCut Home"
-              >
-                W
-              </button>
-              <h1 
-                className="text-2xl font-bold cursor-pointer hover:text-green-100 transition-colors"
-                onClick={() => handleNavClick('home')}
-              >
-                WasteCut
-              </h1>
-            </div>
+            {/* Logo Only - Bigger Size */}
+            <button
+              onClick={() => handleNavClick(ROUTES.HOME)}
+              className="animate-slideInLeft focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-green-600 rounded-lg p-1 transition-all duration-300 hover:scale-110"
+              aria-label="WasteCut Home"
+            >
+              <img 
+                src={wastecutLogo} 
+                alt="WasteCut Logo" 
+                className="h-16 w-auto md:h-20 transition-transform duration-300 hover:rotate-6"
+              />
+            </button>
 
             {/* Desktop Navigation */}
             <nav aria-label="Main navigation" className="hidden md:flex items-center space-x-6 animate-slideInRight">
@@ -130,7 +122,7 @@ function Header({ currentPage, setCurrentPage }) {
       {isMobileMenuOpen && (
         <div 
           className="md:hidden fixed inset-0 bg-black bg-opacity-30 z-40 animate-fadeIn"
-          style={{ top: '72px' }}
+          style={{ top: '88px' }}
           onClick={closeMobileMenu}
           aria-hidden="true"
         />
