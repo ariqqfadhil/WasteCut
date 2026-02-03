@@ -1,0 +1,176 @@
+{
+  "communities": [
+    {
+      "id": 1,
+      "name": "Zero Waste Jakarta",
+      "location": "Jakarta Selatan",
+      "members": 250,
+      "category": "Urban",
+      "description": "Komunitas yang fokus pada gaya hidup zero waste di Jakarta. Kami mengadakan workshop, cleanup, dan edukasi rutin.",
+      "image": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=400",
+      "activities": ["Workshop", "Beach Cleanup", "Edukasi Sekolah"]
+    },
+    {
+      "id": 2,
+      "name": "Eco Warriors Bandung",
+      "location": "Bandung",
+      "members": 180,
+      "category": "Urban",
+      "description": "Gerakan mahasiswa peduli lingkungan di Bandung. Fokus pada kampanye pengurangan plastik sekali pakai.",
+      "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400",
+      "activities": ["Kampanye", "Workshop", "Advocacy"]
+    },
+    {
+      "id": 3,
+      "name": "Bali Beach Guardians",
+      "location": "Bali",
+      "members": 420,
+      "category": "Coastal",
+      "description": "Komunitas internasional di Bali yang melindungi pantai dari sampah plastik melalui aksi cleanup rutin.",
+      "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
+      "activities": ["Beach Cleanup", "Ocean Conservation", "Tourism Education"]
+    },
+    {
+      "id": 4,
+      "name": "Green Surabaya Movement",
+      "location": "Surabaya",
+      "members": 310,
+      "category": "Urban",
+      "description": "Gerakan masyarakat Surabaya untuk kota yang lebih hijau dan bersih melalui pengelolaan sampah yang baik.",
+      "image": "https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?w=400",
+      "activities": ["Community Composting", "Urban Farming", "Recycling"]
+    },
+    {
+      "id": 5,
+      "name": "Mama Pilah Pilih",
+      "location": "Yogyakarta",
+      "members": 145,
+      "category": "Community",
+      "description": "Komunitas ibu-ibu yang mengajarkan cara memilah sampah dari rumah tangga dengan cara yang fun dan mudah.",
+      "image": "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400",
+      "activities": ["Workshop", "Door-to-door Education", "Waste Bank"]
+    },
+    {
+      "id": 6,
+      "name": "Campus Green Heroes",
+      "location": "Depok",
+      "members": 89,
+      "category": "Education",
+      "description": "Komunitas mahasiswa UI yang mempromosikan kampus hijau dan zero waste lifestyle di lingkungan kampus.",
+      "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400",
+      "activities": ["Campus Campaign", "Student Workshop", "Research"]
+    },
+    {
+      "id": 7,
+      "name": "Semarang Hijau",
+      "location": "Semarang",
+      "members": 195,
+      "category": "Urban",
+      "description": "Komunitas yang bergerak dalam penghijauan kota dan pengelolaan sampah berbasis komunitas di Semarang.",
+      "image": "https://images.unsplash.com/photo-1593113630400-ea4288922497?w=400",
+      "activities": ["Tree Planting", "Waste Management", "Community Education"]
+    },
+    {
+      "id": 8,
+      "name": "Mangrove Guardians",
+      "location": "Surabaya",
+      "members": 167,
+      "category": "Coastal",
+      "description": "Fokus pada pelestarian mangrove dan pembersihan pesisir dari sampah plastik di wilayah pantai Surabaya.",
+      "image": "https://images.unsplash.com/photo-1584714268709-c3dd9c92b378?w=400",
+      "activities": ["Mangrove Planting", "Coastal Cleanup", "Marine Education"]
+    },
+    {
+      "id": 9,
+      "name": "Medan Green Generation",
+      "location": "Medan",
+      "members": 203,
+      "category": "Education",
+      "description": "Generasi muda Medan yang aktif mengkampanyekan gaya hidup ramah lingkungan melalui media sosial dan event.",
+      "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400",
+      "activities": ["Social Media Campaign", "Youth Workshop", "Environmental Event"]
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "5 Cara Mudah Memulai Gaya Hidup Zero Waste",
+      "author": "Admin WasteCut",
+      "date": "2026-01-15",
+      "category": "Tips & Tricks",
+      "excerpt": "Mulai perjalanan zero waste kamu dengan 5 langkah sederhana yang bisa dilakukan hari ini juga!",
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600",
+      "readTime": "5 min"
+    },
+    {
+      "id": 2,
+      "title": "Dampak Sampah Plastik Terhadap Ekosistem Laut Indonesia",
+      "author": "Dr. Budi Santoso",
+      "date": "2026-01-10",
+      "category": "Environment",
+      "excerpt": "Indonesia menghasilkan 64 juta ton sampah per tahun. Bagaimana dampaknya terhadap laut kita?",
+      "image": "https://images.unsplash.com/photo-1621451537084-482c73073a0f?w=600",
+      "readTime": "8 min"
+    },
+    {
+      "id": 3,
+      "title": "Sukses Menjalankan Bank Sampah di Kampung",
+      "author": "Ibu Siti",
+      "date": "2026-01-05",
+      "category": "Success Story",
+      "excerpt": "Cerita inspiratif bagaimana bank sampah mengubah ekonomi kampung dan mengurangi sampah hingga 70%.",
+      "image": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=600",
+      "readTime": "6 min"
+    },
+    {
+      "id": 4,
+      "title": "Kompos Rumahan: Mengubah Sampah Organik Jadi Emas Hitam",
+      "author": "Pak Ahmad",
+      "date": "2025-12-28",
+      "category": "DIY",
+      "excerpt": "Tutorial lengkap membuat kompos dari sampah dapur yang mudah dan tidak berbau.",
+      "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600",
+      "readTime": "10 min"
+    },
+    {
+      "id": 5,
+      "title": "10 Produk Ramah Lingkungan yang Wajib Kamu Punya",
+      "author": "Sarah Green",
+      "date": "2026-01-20",
+      "category": "Tips & Tricks",
+      "excerpt": "Daftar produk sustainable yang bisa menggantikan barang-barang plastik sekali pakai di rumahmu.",
+      "image": "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=600",
+      "readTime": "7 min"
+    },
+    {
+      "id": 6,
+      "title": "Perubahan Iklim dan Krisis Sampah: Apa Hubungannya?",
+      "author": "Dr. Lisa Permata",
+      "date": "2026-01-18",
+      "category": "Environment",
+      "excerpt": "Memahami kaitan erat antara pengelolaan sampah yang buruk dengan akselerasi perubahan iklim global.",
+      "image": "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=600",
+      "readTime": "9 min"
+    },
+    {
+      "id": 7,
+      "title": "Kisah Anak Muda yang Mengubah Desanya Jadi Zero Waste",
+      "author": "Andi Wijaya",
+      "date": "2026-01-12",
+      "category": "Success Story",
+      "excerpt": "Perjalanan seorang pemuda yang berhasil mengajak seluruh desa untuk hidup tanpa sampah plastik.",
+      "image": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600",
+      "readTime": "8 min"
+    },
+    {
+      "id": 8,
+      "title": "Membuat Tas Belanja dari Kaos Bekas dalam 15 Menit",
+      "author": "Craft Corner",
+      "date": "2026-01-08",
+      "category": "DIY",
+      "excerpt": "Panduan step-by-step mengubah kaos lama menjadi tas belanja yang praktis dan stylish.",
+      "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600",
+      "readTime": "5 min"
+    }
+  ]
+}
